@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scraped Images</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        img {
+            width: 200px;  /* Replace with the desired width */
+            height: auto;  /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <h1>Scraped Images</h1>
+    <table>
+        <tr>
+            {% for img_url in image_urls %}
+                <td>
+                    <img src="{{ img_url }}" alt="Scraped Image">
+                </td>
+            {% endfor %}
+        </tr>
+    </table>
+</body>
+</html>
