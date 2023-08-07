@@ -19,6 +19,20 @@
     </style>
 </head>
 <body>
+    <form action="/scripe/" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="url">URl:</label>
+          <input type="url" class="form-control" id="email" placeholder="Enter email" name="url">
+        </div>
+        <div class="form-group">
+          <label for="pwd">NO OF IMAGE:</label>
+          <input type="text" class="form-control" id="pwd" placeholder="Enter Number" name="number">
+        </div>
+        <div class="checkbox">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
     <h1>Scraped Images</h1>
     <table>
         <tr>
@@ -29,5 +43,6 @@
             {% endfor %}
         </tr>
     </table>
+    
 </body>
 </html>
